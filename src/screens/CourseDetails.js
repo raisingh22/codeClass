@@ -1,14 +1,12 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity,FlatList } from "react-native";
 import React from "react";
-import Courses from "../api/Courseapi";
+import Courses from "../api/Courses";
 
-const CourseDetails = ({ navigation, route }) => {
-    const id = route.params.courseId;
-    console.log(id);
+const CourseDetails = ({ navigation }) => {
+    // const id = route.params.course1;
+    // console.log(id);
 
-    const selectedCourse = Courses.find((element) => {
-        return id === element.id;
-    });
+    const selectedCourse = ({ items }) => {
 
     return (
         <View style={styles.mainContainer}>
@@ -23,7 +21,7 @@ const CourseDetails = ({ navigation, route }) => {
 
                 <Text style={styles.mainHeader}>{selectedCourse.title}</Text>
 
-                <Text style={styles.description}>{selectedCourse.description}</Text>
+                <Text style={styles.description}>{selectedCourse.discription}</Text>
 
                 <Text style={styles.description}>{selectedCourse.course1}</Text>
 
@@ -43,12 +41,23 @@ const CourseDetails = ({ navigation, route }) => {
         </View>
     );
 };
+    return (<FlatList
+        keyExtractor={(item) => item.id}
+        data={Courses}
+        renderItem={selectedCourse}
+    // horizontal={true}
 
+
+    />
+
+
+    )
+}
 // !todo style the course1 and make it uppercase
 
 const styles = StyleSheet.create({
     mainContainer: {
-        // backgroundColor: "red",
+         backgroundColor: "red",
         paddingHorizontal: 20,
     },
     courseContainer: {

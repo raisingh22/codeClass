@@ -7,7 +7,7 @@ import About from "./src/screens/About";
 import Contact from "./src/screens/Contact";
 import Course from "./src/screens/Course";
 import UserData from "./src/screens/UserData";
-// import CourseDetails from "./src/screens/CourseDetails";
+import CourseDetails from "./src/screens/CourseDetails";
 import {
   useFonts,
   JosefinSans_400Regular,
@@ -56,6 +56,17 @@ export default function App() {
         }
         }
       />
+      <Stack.Screen
+        name='CourseDetails'
+        component={CourseDetails}
+        options={{
+          headerTitleStyle: {
+            fontSize: 25,
+          },
+          headerTitle: "Course Details",
+          headerTitleAlign: "center",
+        }
+        }/>
       {/* Contact Screen */}
       <Stack.Screen
         name='Contact'
@@ -68,6 +79,7 @@ export default function App() {
           headerTitleAlign: "center",
         }
         }
+        
       />
       {/* About Screen */}
       <Stack.Screen

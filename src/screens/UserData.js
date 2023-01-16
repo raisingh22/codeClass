@@ -1,25 +1,26 @@
 import { View, Text, FlatList, StyleSheet, Image } from "react-native";
 import React, { useState, useEffect } from "react";
+import Student from "../api/Student";
 
-const UserData = () => {
-    const [isLoaded, setIsLoaded] = useState(true);
-    const [myData, setMyData] = useState([]);
+const UserData = ({navigation}) => {
+    // const [isLoaded, setIsLoaded] = useState(true);
+    // const [myData, setMyData] = useState([]);
 
-    const getUserData = async () => {
-        try {
-            const response = await fetch(
-                "https://thapatechnical.github.io/userapi/users.json"
-            );
-            const realData = await response.json();
-            setMyData(realData);
-            setIsLoaded(false);
-            // console.log(realData);
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    // const getUserData = async () => {
+    //     try {
+    //         const response = await fetch(
+    //             "https://thapatechnical.github.io/userapi/users.json"
+    //         );
+    //         const realData = await response.json();
+    //         setMyData(realData);
+    //         setIsLoaded(false);
+    //         // console.log(realData);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
-    useEffect(() => getUserData(), []);
+    // useEffect(() => getUserData(), []);
 
     // render the students cards
     const showUserData = ({ item }) => {
@@ -39,7 +40,8 @@ const UserData = () => {
 
                     <View style={styles.mainContain}>
                         <Text style={styles.myName}> Name: {item.name} </Text>
-                        <Text style={styles.myName}> email: {item.email} </Text>
+                        <Text style={styles.myName}
+                        > email: {item.email} </Text>
                         <Text style={styles.myName}> mobile: {item.mobile} </Text>
                     </View>
                 </View>
@@ -52,7 +54,7 @@ const UserData = () => {
             <Text style={styles.mainHeader}>List of Students</Text>
             <FlatList
                 keyExtractor={(item) => item.id}
-                data={myData}
+                data={Student}
                 renderItem={showUserData}
                 horizontal
                 showsHorizontalScrollIndicator={false}
