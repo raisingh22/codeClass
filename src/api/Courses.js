@@ -8,6 +8,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
     {
         id: "2",
@@ -18,6 +19,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
     {
         id: "3",
@@ -28,6 +30,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
     {
         id: "4",
@@ -38,6 +41,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
     {
         id: "5",
@@ -48,6 +52,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
     {
         id: "6",
@@ -58,6 +63,7 @@ const Courses = [
         course1: 'HTML',
         course2: "CSS",
         Course3: "JavaScript",
+        price: 5000,
     },
 ];
 
