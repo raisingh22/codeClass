@@ -12,22 +12,21 @@ const About = () => {
             <View>
                 <Image
                     style={styles.imgStyle}
-                    source={{
-                        uri: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                    }}
-
+                    resizeMode="contain"
+                    source={require("../../assets/h.jpg")
+                    }
                 />
             </View>
             <View style={styles.aboutLayout}>
                 <Text style={styles.aboutSubHeader}>About me</Text>
-                <Text style={[styles.paraStyle, styles.aboutPara]}> content</Text>
+                <Text style={[styles.paraStyle, styles.aboutPara]}> This includes working with languages such as HTML, CSS, JavaScript for the front-end, and languages such as Python, Ruby, or Java for the back-end. .</Text>
             </View>
             <Text style={styles.mainHeader}>Follow me on a social network</Text>
             <View style={[styles.menuContainer, styles.mainH1]}>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={() => Linking.openURL(
-                        "https://www.instagram.com/code_groo/"
+                        "https://www.instagram.com/_https.harryrai/"
 
                     )}
                 >
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
         // fontWeight:"400",
     },
     paraStyle: {
-        fontSize: 18,
+        fontSize: 15,
         color: "#7d7d7d",
         paddingBottom: 30,
     },

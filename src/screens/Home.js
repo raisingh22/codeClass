@@ -3,7 +3,7 @@ import React from 'react'
 import Menu from '../Components/Menu';
 
 const Home = (props) => {
-    const description = "Please note that this is just an example and you will need to adjust the code depending on the specifics of your API endpoint, such as the URL, authentication, headers, and the structure of the data that you receive.";
+    const description = "The best code is no code at all.";
     return (
         <View style={styles.mainContainer}>
             <View style={styles.homeTop}>
