@@ -2,9 +2,9 @@ import { StyleSheet, Text, View, Image, TouchableOpacity,FlatList } from "react-
 import React from "react";
 import Courses from "../api/Courses";
 
-const CourseDetails = ({ navigation }) => {
-    // const id = route.params.course1;
-    // console.log(id);
+const CourseDetails = ({ navigation ,route }) => {
+    const id = route.params.courseId;
+    console.log(id);
 
     const selectedCourse = ({ items }) => {
 

@@ -22,7 +22,10 @@ const Course = ({ navigation }) => {
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity style={styles.buttonStyle}
                             onPress={() => {
-                                navigation.navigate("CourseDetails")
+                                navigation.navigate("CourseDetails"
+                                    , {
+                                    courseId: item.id,
+                                })
                             }}>
                             <Text style={styles.buttonText}> Course Details</Text>
                         </TouchableOpacity>
